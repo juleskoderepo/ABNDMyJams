@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Jams</string>
+    <string name="oldies">Oldies</string>
+    <string name="island_music">Island Music</string>
+    <string name="folk_indie">Folk/Indie Rock</string>
+    <string name="hiphop_rap">HipHop/Rap</string>
+</resources>
