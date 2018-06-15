@@ -22,8 +22,8 @@
             android:label="@string/island_music"/>
         <activity android:name=".HipHopRap"
             android:label="@string/hiphop_rap"/>
-        <activity android:name=".FolkIndieRock"
-            android:label="@string/folk_indie"/>
+        <activity android:name=".FolkRock"
+            android:label="@string/folk"/>
         <activity android:name=".Play"/>
     </application>
 

@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> genres = new ArrayList<String>();
 
-        genres.add(getString(R.string.folk_indie));
+        genres.add(getString(R.string.folk));
         genres.add(getString(R.string.hiphop_rap));
         genres.add(getString(R.string.island_music));
         genres.add(getString(R.string.oldies));
 
         ArrayAdapter<String> genresAdapter =
-                new ArrayAdapter<String>(this, R.layout.list_item,genres);
+                new ArrayAdapter<String>(this, R.layout.genre_list,genres);
 
         GridView genreGrid = (GridView) findViewById(R.id.grid);
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 switch(p) {
                     case 0:
-                        Intent openFolk = new Intent(MainActivity.this, FolkIndieRock.class);
+                        Intent openFolk = new Intent(MainActivity.this, FolkRock.class);
                         startActivity(openFolk);
                         break;
                     case 1:
