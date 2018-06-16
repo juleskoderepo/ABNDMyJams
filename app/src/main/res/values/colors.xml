@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="play_button_text_color">#01579B</color>
+    <color name="shape_border_color_default">#01579B</color>
+    <color name="shape_grad_color_end">#FFFFFF</color>
+    <color name="shape_grad_color_start">#9E9E9E</color>
 </resources>

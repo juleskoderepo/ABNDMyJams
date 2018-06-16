@@ -1,7 +1,10 @@
 package com.example.android.abndmyjams;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -14,7 +17,7 @@ public class FolkRock extends AppCompatActivity {
         setContentView(R.layout.music_list);
 
         // declare an array list of music
-        ArrayList<Music> folkList = new ArrayList<Music>();
+        final ArrayList<Music> folkList = new ArrayList<>();
 
         // populate the array list
         folkList.add(new Music ("Bob Schneider","40 Dogs (Like Romeo and Juliet)","Lovely Creatures",getString(R.string.folk)));
@@ -30,10 +33,19 @@ public class FolkRock extends AppCompatActivity {
 
         // associate the MusicListAdapter to the ListView
         MusicListAdapter adapter = new MusicListAdapter(this,folkList);
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
         listView.setAdapter(adapter);
 
-
+        // launch the play activity to play the selected item
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Music currentTrack = folkList.get(position);
+                Intent openPlayer = new Intent(FolkRock.this,Player.class);
+                openPlayer.putExtra("track",currentTrack);
+                startActivity(openPlayer);
+            }
+        });
 
     }
 }

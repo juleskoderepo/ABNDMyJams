@@ -17,27 +17,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<String> genres = new ArrayList<String>();
+        // declare array list for music genres
+        // todo - allow users to add custom music categories
+        ArrayList<String> genres = new ArrayList<>();
 
+        // populate array list
         genres.add(getString(R.string.folk));
         genres.add(getString(R.string.hiphop_rap));
         genres.add(getString(R.string.island_music));
         genres.add(getString(R.string.oldies));
 
+        // associate adapter to the view
         ArrayAdapter<String> genresAdapter =
-                new ArrayAdapter<String>(this, R.layout.genre_list,genres);
+                new ArrayAdapter<>(this, R.layout.genre_list,genres);
 
-        GridView genreGrid = (GridView) findViewById(R.id.grid);
+        GridView genreGrid = findViewById(R.id.grid);
 
         genreGrid.setAdapter(genresAdapter);
 
+        /* set a click listener to each item in the grid and use Intent to
+         * launch the respective activity*/
         genreGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                int p = position;
-
-                switch(p) {
+                switch(position) {
                     case 0:
                         Intent openFolk = new Intent(MainActivity.this, FolkRock.class);
                         startActivity(openFolk);

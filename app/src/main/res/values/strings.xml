@@ -8,4 +8,9 @@
     <string name="label_song">Song:</string>
     <string name="label_album">Album:</string>
     <string name="label_genre">Genre:</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="on_pause">Pausing current track.</string>
+    <string name="on_play">Playing current track.</string>
+    <string name="image_art_desc">Placeholder for album or music genre art</string>
 </resources>
