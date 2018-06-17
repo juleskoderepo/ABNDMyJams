@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="color" value="3f51b5" />
+                                                <entry key="color" value="9e9e9e" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -45,7 +45,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="9e9e9e" />
+                                      <entry key="backgroundColor" value="3f51b5" />
                                       <entry key="foregroundAssetType" value="CLIP_ART" />
                                       <entry key="outputName" value="mj_launcher" />
                                     </map>

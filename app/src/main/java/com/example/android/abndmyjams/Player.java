@@ -1,6 +1,7 @@
 package com.example.android.abndmyjams;
 
-import android.annotation.TargetApi;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,6 @@ public class Player extends AppCompatActivity {
     public static final String KEY_savedCurrentArtist = "savedCurrentArtist";
     public static final String KEY_savedCurrentAlbum = "savedCurrentAlbum";
 
-    @TargetApi(21)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +70,7 @@ public class Player extends AppCompatActivity {
         playButton.setFocusableInTouchMode(true);
         playButton.requestFocus();
         // show the pause symbol on the button as the music plays by default on open
-        playButton.setBackground(getDrawable(R.drawable.pause_circle_outline_indigo_24dp));
+        ViewCompat.setBackground(playButton,ContextCompat.getDrawable(this,R.drawable.pause_circle_outline_indigo_24dp));
 
         // Handle click events for the player buttons.
 
@@ -81,14 +81,14 @@ public class Player extends AppCompatActivity {
             public void onClick(View v) {
                 if (is_playing) {
                     // when the user clicks the button to pause the playback, display the play symbol
-                    playButton.setBackground(getDrawable(R.drawable.play_circle_outline_indigo_24dp));
+                    ViewCompat.setBackground(playButton,ContextCompat.getDrawable(Player.this,R.drawable.play_circle_outline_indigo_24dp));
                     is_playing = false; // update is_playing to false.
 
                     // display toast message to user that playback has been paused.
                     Toast.makeText(getApplicationContext(), getString(R.string.on_pause), Toast.LENGTH_LONG).show();
                 } else {
                     // when the user clicks the button to start playback, display the pause symbol.
-                    playButton.setBackground(getDrawable(R.drawable.pause_circle_outline_indigo_24dp));
+                    ViewCompat.setBackground(playButton,ContextCompat.getDrawable(Player.this,R.drawable.pause_circle_outline_indigo_24dp));
                     is_playing = true; // update is_playing to true.
 
                     // display toast message to user that playback is in progress.

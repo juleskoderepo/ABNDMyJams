@@ -1,82 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin">
 
     <LinearLayout
-        android:id="@+id/labels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <TextView
-        android:id="@+id/artist_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_artist"
+            android:id="@+id/artist_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginEnd="@dimen/artist_marginRight"
+            android:layout_marginRight="@dimen/artist_marginRight"
+            android:text="@string/label_artist"
         />
-
-        <TextView
-            android:id="@+id/song_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_song"
-            />
-
-        <TextView
-            android:id="@+id/album_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_album"
-            />
-
-        <TextView
-            android:id="@+id/genre_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_genre"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/labels"
-        android:layout_toRightOf="@id/labels"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/label_padding_horizontal"
-        android:paddingRight="@dimen/label_padding_horizontal"
-        android:paddingStart="@dimen/label_padding_horizontal">
 
         <TextView
             android:id="@+id/artist_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             tools:text="Artist"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/song_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginEnd="@dimen/song_marginRight"
+            android:layout_marginRight="@dimen/song_marginRight"
+            android:text="@string/label_song"
+            />
 
         <TextView
             android:id="@+id/song_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             tools:text="Song Title"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/album_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:text="@string/label_album"
+            />
 
         <TextView
             android:id="@+id/album_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/album_marginLeft"
+            android:layout_marginLeft="@dimen/album_marginLeft"
             tools:text="Album Name"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/genre_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:text="@string/label_genre"/>
 
         <TextView
             android:id="@+id/genre_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             tools:text="Genre"/>
 
     </LinearLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

@@ -21,7 +21,7 @@ public class MusicListAdapter extends ArrayAdapter<Music>{
          * @param context Current context used to inflate the layout file.
          * @param music A list of Music objects to display in a list/view.
          */
-        public MusicListAdapter(Activity context, ArrayList<Music> music){
+        MusicListAdapter(Activity context, ArrayList<Music> music){
 
             super(context, 0, music);
         }
@@ -51,6 +51,7 @@ public class MusicListAdapter extends ArrayAdapter<Music>{
             TextView artistTV = listItemView.findViewById(R.id.artist_tv);
             // Get the artist name from the current Music object and set this text
             // on the artist TextView
+            assert currentItem != null; // added to avoid NPE
             artistTV.setText(currentItem.getArtist());
 
             // Find the TextView in the list_item.xml layout with the ID song_tv

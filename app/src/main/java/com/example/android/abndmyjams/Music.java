@@ -33,7 +33,7 @@ public class Music implements Parcelable {
      * @param album name of the album
      * @param musicGenre the musical category the song or artist falls under
      */
-    public Music(String artist, String songTitle, String album, String musicGenre){
+    Music(String artist, String songTitle, String album, String musicGenre){
         mArtist = artist;
         mSongTitle = songTitle;
         mAlbum = album;
