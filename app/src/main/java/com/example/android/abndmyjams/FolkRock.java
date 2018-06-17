@@ -43,6 +43,7 @@ public class FolkRock extends AppCompatActivity {
                 Music currentTrack = folkList.get(position);
                 Intent openPlayer = new Intent(FolkRock.this,Player.class);
                 openPlayer.putExtra("track",currentTrack);
+                openPlayer.putExtra("list",folkList);
                 startActivity(openPlayer);
             }
         });

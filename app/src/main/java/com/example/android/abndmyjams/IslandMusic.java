@@ -43,6 +43,7 @@ public class IslandMusic extends AppCompatActivity {
                 Music currentTrack = islandMusicList.get(position);
                 Intent openPlayer = new Intent(IslandMusic.this,Player.class);
                 openPlayer.putExtra("track",currentTrack);
+                openPlayer.putExtra("list",islandMusicList);
                 startActivity(openPlayer);
             }
         });

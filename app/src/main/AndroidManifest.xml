@@ -24,7 +24,8 @@
             android:label="@string/hiphop_rap"/>
         <activity android:name=".FolkRock"
             android:label="@string/folk"/>
-        <activity android:name=".Player"/>
+        <activity android:name=".Player"
+            android:label="@string/now_playing"/>
     </application>
 
 </manifest>

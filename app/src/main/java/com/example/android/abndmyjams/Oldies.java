@@ -44,6 +44,7 @@ public class Oldies extends AppCompatActivity {
                 Music currentTrack = oldiesList.get(position);
                 Intent openPlayer = new Intent(Oldies.this,Player.class);
                 openPlayer.putExtra("track",currentTrack);
+                openPlayer.putExtra("list",oldiesList);
                 startActivity(openPlayer);
             }
         });

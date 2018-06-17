@@ -4,6 +4,7 @@
     <string name="island_music">Island Music</string>
     <string name="folk">Folk Rock</string>
     <string name="hiphop_rap">HipHop/Rap</string>
+    <string name="now_playing">Now Playing</string>
     <string name="label_artist">Artist:</string>
     <string name="label_song">Song:</string>
     <string name="label_album">Album:</string>

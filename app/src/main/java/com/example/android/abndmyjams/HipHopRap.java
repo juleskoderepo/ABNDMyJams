@@ -43,6 +43,7 @@ public class HipHopRap extends AppCompatActivity {
                 Music currentTrack = hipHopRapList.get(position);
                 Intent openPlayer = new Intent(HipHopRap.this,Player.class);
                 openPlayer.putExtra("track",currentTrack);
+                openPlayer.putExtra("list",hipHopRapList);
                 startActivity(openPlayer);
             }
         });
