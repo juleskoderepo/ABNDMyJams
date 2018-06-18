@@ -9,21 +9,52 @@
         android:roundIcon="@mipmap/mj_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- A child of the main activity -->
         <activity android:name=".Oldies"
-            android:label="@string/oldies"/>
+            android:label="@string/oldies"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 (API 14) and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.abndmyjams.MainActivity"/>
+        </activity>
+        <!--A child of the main activity -->
         <activity android:name=".IslandMusic"
-            android:label="@string/island_music"/>
+            android:label="@string/island_music"
+            android:parentActivityName=".MainActivity">
+        <!-- Parent activity meta-data to support 4.0 (API 14) and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.abndmyjams.MainActivity"/>
+        </activity>
+        <!--A child of the main activity -->
         <activity android:name=".HipHopRap"
-            android:label="@string/hiphop_rap"/>
+            android:label="@string/hiphop_rap"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 (API 14) and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.abndmyjams.MainActivity"/>
+        </activity>
+
+        <!--A child of the main activity -->
         <activity android:name=".FolkRock"
-            android:label="@string/folk"/>
+            android:label="@string/folk"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 (API 14) and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.abndmyjams.MainActivity"/>
+        </activity>
+
         <activity android:name=".Player"
             android:label="@string/now_playing"/>
     </application>
